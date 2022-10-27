@@ -7,7 +7,7 @@ import java.util.List;
  */
 public interface iEventoService {
     public List<evento> getALLEvento();
-    public evento getEventoBylId(long idEvento);
+    public evento getEventoBylId(long id);
     public void saveEvento(evento evento);
-    public void delete(long idEvento);
+    public void delete(long id);
 }

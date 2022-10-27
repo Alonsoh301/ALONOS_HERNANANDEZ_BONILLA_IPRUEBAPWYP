@@ -8,7 +8,7 @@ import java.util.List;
  */
 public interface iCantanteService {
     public List<cantante> getALLCantante();
-    public cantante getCantanteBylId(int idCantante);
+    public cantante getCantanteBylId(long idCantante);
     public void saveCantante(cantante cantante);
     public void delete(long idCantante);
 }

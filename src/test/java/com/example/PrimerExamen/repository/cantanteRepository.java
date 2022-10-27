@@ -4,10 +4,13 @@
  */
 package com.example.PrimerExamen.repository;
 
+import com.example.PrimerExamen.entity.cantante;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author Alonso
  */
-public interface cantanteRepository {
+public interface cantanteRepository extends CrudRepository<cantante,Long>{
     
 }

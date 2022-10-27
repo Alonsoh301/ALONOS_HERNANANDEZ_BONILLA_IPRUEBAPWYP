@@ -7,7 +7,7 @@ import java.util.List;
  */
 public interface iOrganizadorService {
     public List<organizadorDelEvento> getALLorganizador();
-    public organizadorDelEvento getOrganizadorBylId(int idOrganizador);
+    public organizadorDelEvento getOrganizadorBylId(long idOrganizador);
     public void saveOrganizador(organizadorDelEvento organizadorDelEvento);
-    public void delete(int idOrganizador);
+    public void delete(long idOrganizador);
 }

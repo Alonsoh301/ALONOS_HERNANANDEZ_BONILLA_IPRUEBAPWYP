@@ -1,4 +1,5 @@
 package com.example.PrimerExamen.service;
+import com.example.PrimerExamen.entity.organizadorDelEvento;
 import com.example.PrimerExamen.repository.organizadorRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,15 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author Alonso
  */
-public class organizadorService {
+public class organizadorService implements iOrganizadorService{
     @Autowired
     private organizadorRepository organizadorRepository;
     @Override
-    public List<organizador> getALLPersona(){
-        return (List<organizador>)organizadorRepository.findAll();
+    public List<organizadorDelEvento> getALLorganizador(){
+        return (List<organizadorDelEvento>)organizadorRepository.findAll();
     }
     @Override
-    public void saveorganizador(organizador organizador){
+    public void saveorganizador(organizadorDelEvento organizador){
         organizadorRepository.save(organizador);
     }
     @Override
@@ -23,7 +24,7 @@ public class organizadorService {
     }
 
     @Override
-    public organizador getPersonaBylId(long id) {
+    public organizadordelEvento getOrganizadorBylId(long id) {
         return organizadorRepository.findById(id).orElse(null);
     }
 

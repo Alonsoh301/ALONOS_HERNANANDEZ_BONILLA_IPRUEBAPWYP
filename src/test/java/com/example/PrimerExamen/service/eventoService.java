@@ -5,6 +5,7 @@
 package com.example.PrimerExamen.service;
 
 import com.example.PrimerExamen.entity.evento;
+import com.example.PrimerExamen.repository.eventoRepository;
 import com.example.PrimerExamen.repository.organizadorRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,25 +14,25 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author Alonso
  */
-public class eventoService {
+public class eventoService implements iEventoServise{
     @Autowired
-    private organizadorRepository organizadorRepository;
+    private eventoRepository eventoRepository;
     @Override
-    public List<evento> getALLPersona(){
-        return (List<organizador>)organizadorRepository.findAll();
+    public List<evento> getALLEvento(){
+        return (List<evento>)eventoRepository.findAll();
     }
     @Override
-    public void saveorganizador(organizador organizador){
-        organizadorRepository.save(organizador);
+    public void saveEvento(evento organizador){
+        eventoRepository.save(evento);
     }
     @Override
     public void delete(long id){
-        organizadorRepository.deleteById(id);
+        eventoRepository.deleteById(idEvento);
     }
 
     @Override
-    public organizador getPersonaBylId(long id) {
-        return organizadorRepository.findById(id).orElse(null);
+    public evento getEventoBylId(long id) {
+        return eventoRepository.findById(id).orElse(null);
     }
 
 }
