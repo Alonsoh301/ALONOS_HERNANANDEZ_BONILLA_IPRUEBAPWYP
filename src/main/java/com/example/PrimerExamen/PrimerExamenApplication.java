@@ -1,0 +1,13 @@
+package com.example.PrimerExamen;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PrimerExamenApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PrimerExamenApplication.class, args);
+	}
+
+}
